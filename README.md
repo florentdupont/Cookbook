@@ -104,5 +104,8 @@ puis ajouter les properties un par un :
 
 Tester la connecion dans le pool
 --------------------------------
- ? 
+```
+xa-data-source --name=organisme test-connection-in-pool
+```
+(retourne true normallement)
 
