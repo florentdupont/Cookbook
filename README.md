@@ -104,8 +104,11 @@ puis ajouter les properties un par un :
 
 Tester la connecion dans le pool
 --------------------------------
+En JBoss EAP 6, ou AS 7.1.2. En domain, Il faut se positionner sur le server pour effectuer la commande test-connection-in-pool
+Attention, l'ajout de datasource à chaud, nécessite un redémarrage du HC pour que la commande de tests soit effective.
+cf : https://issues.jboss.org/browse/AS7-2199.
 ```
-xa-data-source --name=organisme test-connection-in-pool
+/host=myhost/server=myserver/subsystem=datasources/xa-data-sources=entrepriseDS:test-connection-in-pool
 ```
 (retourne true normallement)
 
