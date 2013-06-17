@@ -112,3 +112,21 @@ cf : https://issues.jboss.org/browse/AS7-2199.
 ```
 (retourne true normallement)
 
+Tester si un serveur (HOST) est démarré:
+---------------------------------
+aller sur 
+```
+cd /host=[MON_HOST]
+ls
+```
+
+Le running-mode doit être NORMAL
+
+Tester si un serveur (server-group) sur un Host est démarré
+-----------------------------------------------------------
+aller sur 
+```
+cd /host=[MON_HOST]/server-config=[MON_SERVER_GROUP]
+ls
+```
+=> Le status est en STARTING, RUNNING, etc..
